@@ -14,7 +14,7 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-hash: sha1
 spec:
   rules:
-  - host: bmi.konservatif.xyz
+  - host: bmi.rinando.my.id
     http:
       paths:
       - pathType: Prefix
@@ -25,7 +25,7 @@ spec:
             port: 
               number: 80
         
-  - host: kibana.konservatif.xyz
+  - host: kibana.rinando.my.id
     http:
       paths:
       - pathType: Prefix
@@ -36,7 +36,7 @@ spec:
             port: 
               number: 5601
 
-  - host: grafana.konservatif.xyz
+  - host: grafana.rinando.my.id
     http:
       paths:
       - pathType: Prefix
