@@ -51,9 +51,9 @@ pipeline {
         steps{
           script {
             //#Change url wget
-            sh 'wget https://raw.githubusercontent.com/riskirinando/happy-fresh-test/main/calculator-bmi.yaml -P k8s/calculator-bmi/'
-            sh 'sed -i "s/latest/$BUILD_NUMBER/g" k8s/calculator-bmi/calculator-bmi.yaml'
-            sh 'kubectl apply -f k8s/calculator-bmi/calculator-bmi.yaml'
+            sh 'wget https://raw.githubusercontent.com/riskirinando/happy-fresh-test/main/k8s/bmi-calculator/calculator-bmi.yaml -P k8s/calculator-bmi/'
+            sh 'sed -i "s/latest/$BUILD_NUMBER/g" k8s/bmi-calculator/calculator-bmi.yaml'
+            sh 'kubectl apply -f k8s/bmi-calculator/calculator-bmi.yaml'
             sh 'rm -rf *'
             echo "Deploy ${BUILD_NUMBER} To Server Production ${currentBuild.currentResult}"
           }  
