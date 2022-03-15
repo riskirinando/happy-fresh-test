@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: calculator-bmi
+  name: calculator-bmi
+spec:
+  replicas: 2
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: calculator-bmi
+    spec:
+      containers:
+      - image: riskirinando/calculator-bmi:latest
+        imagePullPolicy: Always
+        name: calculator-bmi
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: calculator-bmi-cm
+        resources:
+          limits:
+            cpu: 600m
+            memory: 768Mi
+          requests:
+            cpu: 200m
+            memory: 384Mi
+  selector:
+    matchLabels:
+      app: calculator-bmi
