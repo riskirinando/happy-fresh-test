@@ -1,3 +1,4 @@
+def process_input():
 height = float(input("Enter your height in cm: "))
 weight = float(input("Enter your weight in kg: "))
 
@@ -17,3 +18,4 @@ elif BMI <= 39.9:
     print("You are obese.")
 else:
     print("You are severely obese.")
+return
