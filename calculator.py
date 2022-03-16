@@ -18,4 +18,4 @@ def process_input():
         print("You are obese.")
     else:
         print("You are severely obese.")
-return
+    return
