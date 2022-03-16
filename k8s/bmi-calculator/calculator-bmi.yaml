@@ -19,7 +19,7 @@ metadata:
     app: calculator-bmi
   name: calculator-bmi
 spec:
-  replicas: 2
+  replicas: 3
   strategy: {}
   template:
     metadata:
